@@ -16,7 +16,7 @@ class DoubanSpider(scrapy.Spider):
         for i in range(10):
             yield Request(url=f'https://movie.douban.com/top250?start={i * 25}&filter=')
 
-    def parse(self, response: HtmlResponse):
+    def parse(self, response: HtmlResponse, **kwargs):
         sel = Selector(response)  # 选择器对象
         list_items = sel.css('#content > div > div.article > ol > li')  # css解析, 列表
         for list_item in list_items:
