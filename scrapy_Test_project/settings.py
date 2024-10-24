@@ -63,9 +63,10 @@ DOWNLOAD_DELAY = 1
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "scrapy_Test_project.pipelines.ScrapyTestProjectPipeline": 300,
-#}
+# 管道配置，可以有多个管道，数字是优先级
+ITEM_PIPELINES = {
+    "scrapy_Test_project.pipelines.ScrapyTestProjectPipeline": 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

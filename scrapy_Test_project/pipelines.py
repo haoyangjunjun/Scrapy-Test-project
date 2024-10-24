@@ -17,8 +17,15 @@ class ScrapyTestProjectPipeline:
         self.ws.title = 'Top 250'
         self.ws.append(('标题', '评分', '主题'))  # self管道对象
 
+    def open_spider(self):
+        pass
+
     def close_spider(self, spider):
         self.wb.save('电影数据.xlsx')
 
-    def process_item(self, item, spider):
+    def process_item(self, item, spider):  # 钩子/回调函数（方法）callback
+        title = item.get('title', '')
+        rank = item.get('rank', '')
+        subject = item.get('subject', '')
+        self.ws.append((title, rank, subject))
         return item
