@@ -66,6 +66,7 @@ DOWNLOAD_DELAY = 1
 # 管道配置，可以有多个管道，数字是优先级
 ITEM_PIPELINES = {
     "scrapy_Test_project.pipelines.ScrapyTestProjectPipeline": 300,
+    'scrapy_Test_project.pipelines.WeatherPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
