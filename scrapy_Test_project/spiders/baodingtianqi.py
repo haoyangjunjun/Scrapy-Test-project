@@ -10,13 +10,14 @@ class WeatherSpider(scrapy.Spider):
     allowed_domains = ["tianqihoubao.com"]
     # start_urls = ["http://www.tianqihoubao.com/lishi/baoding/month/202301.html"]
     def start_requests(self):
-        for month in range(1, 13):  # 月份从 1 到 12
-            # 格式化月份为两位数，例如 '01', '02', ..., '12'
-            formatted_month = f'{month:02d}'
-            # 构造完整的 URL
-            url = f'http://www.tianqihoubao.com/lishi/baoding/month/2023{formatted_month}.html'
-            # 生成并返回 Request 对象
-            yield Request(url=url)  # 假设您有一个名为 parse 的回调方法
+        for year in range(2021, 2025):
+            for month in range(1, 13):  # 月份从 1 到 12
+                # 格式化月份为两位数，例如 '01', '02', ..., '12'
+                formatted_month = f'{month:02d}'
+                # 构造完整的 URL
+                url = f'http://www.tianqihoubao.com/lishi/baoding/month/{year}{formatted_month}.html'
+                # 生成并返回 Request 对象
+                yield Request(url=url)  # 假设您有一个名为 parse 的回调方法
 
     def parse(self, response: HtmlResponse, **kwargs):
         # 定位表格

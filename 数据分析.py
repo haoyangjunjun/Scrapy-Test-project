@@ -6,7 +6,7 @@ matplotlib.use('TkAgg')
 import numpy as np
 
 # 读取xlsx文件
-file_path = 'weather_data.xlsx'  # 请替换为你的xlsx文件路径
+file_path = 'weather_data.xlsx'
 df = pd.read_excel(file_path)
 
 # 数据清洗和预处理

@@ -68,7 +68,9 @@ ITEM_PIPELINES = {
     "scrapy_Test_project.pipelines.ScrapyTestProjectPipeline": 300,
     'scrapy_Test_project.pipelines.WeatherPipeline': 300,
 }
-
+DOWNLOAD_TIMEOUT = 10
+RETRY_ENABLED = True
+RETRY_TIMES = 3
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True

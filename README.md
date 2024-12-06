@@ -37,9 +37,10 @@ https://www.bilibili.com/video/BV1a14y1b7dw?vd_source=7f2e8da90ee6d1aad530032f31
 http://www.tianqihoubao.com/lishi/baoding/month/202010.html
 ```
 
-爬取保定一年的天气，并存入表中，供其他程序分析。
+爬取保定2021-2024的天气，并存入表中，供其他程序分析。
 
-启动：``scrapy crawl weather ``
+启动：``scrapy crawl weather ``  
 
 在项目内写了一个数据分析程序，可以生成一些图表，还有简单的统计数据
 
+在项目内写了一个数据分析程序，可以生成一些图表，还有简单的统计数据
