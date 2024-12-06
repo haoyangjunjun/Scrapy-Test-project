@@ -41,6 +41,6 @@ http://www.tianqihoubao.com/lishi/baoding/month/202010.html
 
 启动：``scrapy crawl weather ``  
 
-在项目内写了一个数据分析程序，可以生成一些图表，还有简单的统计数据
+添加一个数据整理程序，整理爬取到的表格
 
 在项目内写了一个数据分析程序，可以生成一些图表，还有简单的统计数据

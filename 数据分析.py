@@ -11,7 +11,7 @@ df = pd.read_excel(file_path)
 
 # 数据清洗和预处理
 # 转换日期列为datetime类型，并设置为索引
-df['Date'] = pd.to_datetime(df['Date'].str.replace('年', '-').str.replace('月', '-').str.replace('日', ''), format='%Y-%m-%d')
+# df['Date'] = pd.to_datetime(df['Date'].str.replace('年', '-').str.replace('月', '-').str.replace('日', ''), format='%Y-%m-%d')
 df.set_index('Date', inplace=True)
 
 
